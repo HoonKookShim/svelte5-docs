@@ -68,7 +68,7 @@ todos.push({
 
 ### Classes
 
-You can also use `$state` in class fields (whether public or private):
+클래스 필드에도 `$state`를 사용할 수 있습니다. (public 이거나 private 모두 사용할 수 있습니다):
 
 ```js
 // @errors: 7006 2554
@@ -87,11 +87,11 @@ class Todo {
 }
 ```
 
-> [!NOTE] The compiler transforms `done` and `text` into `get`/`set` methods on the class prototype referencing private fields.
+> [!NOTE] 컴파일러는 `done`과 `text`를 private field를 참조하는 `get`/`set`프로토타입 메소드로 변형시킵니다.
 
 ## `$state.raw`
 
-In cases where you don't want objects and arrays to be deeply reactive you can use `$state.raw`.
+객체와 배열의 깊은 반응성을 원하지 않을 때는 `$state.raw`를 사용하면 됩니다.
 
 State declared with `$state.raw` cannot be mutated; it can only be _reassigned_. In other words, rather than assigning to a property of an object, or using an array method like `push`, replace the object or array altogether if you'd like to update it:
 
